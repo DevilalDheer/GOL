@@ -4,6 +4,6 @@
       - for j in 0..(@cols - 1)
         .col-lg-1.col-md-1.col-xs-1
           - if  @grid and @grid[i][j] == 1
-            .cell.active.fadeIn row="#{i}" col="#{j}"
+            .cell.active.fadeIn{:col => j, :row => i}
           - else
-            .cell.fadeIn row="#{i}" col="#{j}"
+            .cell.fadeIn{:col => j, :row => i}
